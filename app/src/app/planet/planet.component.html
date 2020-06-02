@@ -1,0 +1,17 @@
+<mat-toolbar role="heading">
+    <mat-nav-list class="list-horizontal" role="navigation">
+        <mat-list-item><a  routerLink="/planet" routerLinkActive="active" mat-button color="primary">Planetas</a></mat-list-item>
+        <mat-list-item><a  routerLink="new" routerLinkActive="active" mat-button color="primary">Novo</a></mat-list-item>
+        <mat-list-item class="{{ !(isSearchEnabled | async) ? 'disabled' : 'enabled'}}">
+            <mat-form-field>
+                <mat-label style="font-size: smaller;">Pesquisa por nome</mat-label>
+                <input matInput type="text" [disabled]="!(isSearchEnabled | async)" [(ngModel)]="search" (change)="setSearch()">
+                <mat-hint>campo vazio para a lista completa</mat-hint>
+                <button mat-button matSuffix mat-icon-button aria-label="pesquisa" [disabled]="!(isSearchEnabled | async)">
+                  <mat-icon>search</mat-icon>
+                </button>
+              </mat-form-field>              
+        </mat-list-item>
+    </mat-nav-list>
+</mat-toolbar>
+<router-outlet></router-outlet>

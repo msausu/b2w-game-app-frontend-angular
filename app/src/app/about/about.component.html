@@ -1,0 +1,36 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>O Jogo</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Nossos associados são apaixonados por <a href="https://pt.wikipedia.org/wiki/Star_Wars">Guerra nas Estrelas</a> e, com isso, queremos criar um jogo com algumas
+            informações da franquia.</p>
+        <p>Para permitir que a equipe da frente crie esse aplicativo, queremos desenvolver uma API que contenha os dados
+            dos planetas.</p>
+        <h4>Requisitos</h4>
+        <ul>
+            <li>A API deve ser <a href="https://pt.wikipedia.org/wiki/REST">REST.</a></li>
+            <li>Para cada planeta, os seguintes dados devem ser obtidos do banco de dados do aplicativo, sendo inseridos
+                manualmente:
+                <ul>
+                    <li>Nome</li>
+                    <li>Clima</li>
+                    <li>Terreno</li>
+                </ul>
+            <li>Para cada planeta, também devemos ter o número de aparições nos filmes, que podem ser obtidos
+                através da <a href="https://swapi.dev/about">API pública de Star Wars.</a></li>
+        </ul>
+        <h4>Recursos desejados</h4>
+        <ul>
+            <li>Adicione um planeta (com nome, clima e terreno)</li>
+            <li>Listar planetas</li>
+            <li>Procura por nome</li>
+            <li>Pesquisa por ID</li>
+            <li>Remover planeta</li>
+        </ul>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-button routerLink="/planet" routerLinkActive="active">O frontend</a>
+        <a mat-button href="https://github.com/msausu/b2w-game-app-backend-java/blob/master/app/game-planet-service-api/src/site/markdown/choices-limitations.md">O backend</a>
+    </mat-card-actions>
+</mat-card>

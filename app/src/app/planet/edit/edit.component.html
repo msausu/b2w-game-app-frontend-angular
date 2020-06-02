@@ -1,0 +1,12 @@
+<mat-card *ngIf="planet$ | async as planet">
+    <mat-card-header>
+        <mat-card-title>{{ planet.nome }}</mat-card-title>
+        <mat-card-subtitle *ngIf="planet?.clima">Clima: {{ planet.clima }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="planet?.terreno">Terreno: {{ planet.terreno }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="planet?.numFilm && (planet?.numFilm >= 0)">Filmes StarWars: 
+            {{ planet.numFilm > 0 ? planet.numFilm : 'nenhum filme ainda' }}</mat-card-subtitle>
+    </mat-card-header>
+</mat-card>
+<br>
+<br>
+<button mat-button (click)="remove()">Excluir</button>

@@ -1,0 +1,17 @@
+<mat-sidenav-container style="height: 100%; width: auto;">
+  <mat-sidenav  #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
+    <p>Opções</p>
+    <mat-list>
+      <mat-list-item><a mat-button routerLink="/opt-planet">Planetas</a></mat-list-item>
+      <mat-list-item><a mat-button routerLink="/opt-about">Sobre</a></mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar><button type="button" mat-button (click)="sidenav.toggle()">
+      B2W Game
+      </button>
+    </mat-toolbar>
+    <div></div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,18 @@
+<p>Novo Planeta</p>
+<mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="planet.nome" required>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Clima</mat-label>
+    <input matInput [(ngModel)]="planet.clima">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Terreno</mat-label>
+    <input matInput [(ngModel)]="planet.terreno">
+</mat-form-field>
+<br>
+<br>
+<button mat-button (click)="save()">Gravar</button>

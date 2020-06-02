@@ -1,0 +1,14 @@
+
+@import '~@angular/material/_theming.scss';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body,
+html {
+    font-family: Lato, Arial, sans-serif;
+    font-size: inherit;
+    font-weight: 500;
+    margin: 0;
+	margin: 0 auto;
+    height: 100% !important;
+    padding-left: 0em;
+}
